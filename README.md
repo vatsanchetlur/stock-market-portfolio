@@ -141,3 +141,5 @@ This project is licensed under the MIT License.
 - Stock data from various financial APIs
 - Icons and styling inspiration from modern web design
 - Alpha Vantage for real-time market data
+
+## Jake is here now 
