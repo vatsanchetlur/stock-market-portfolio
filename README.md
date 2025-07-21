@@ -142,6 +142,4 @@ This project is licensed under the MIT License.
 - Icons and styling inspiration from modern web design
 - Alpha Vantage for real-time market data
 
-## Jake is here now 
-## Vatsan is here now
-## new Line added by vatsan
+=======
