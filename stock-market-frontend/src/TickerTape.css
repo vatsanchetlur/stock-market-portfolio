@@ -1,0 +1,172 @@
+/* Ticker Tape Styles */
+.ticker-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-left: 3px solid #4f46e5;
+  box-shadow: -2px 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ticker-header {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 15px;
+}
+
+.ticker-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ticker-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.ticker-item {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticker-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ticker-symbol {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a202c;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.ticker-icon {
+  font-size: 1.3rem;
+}
+
+.ticker-name {
+  font-size: 0.85rem;
+  color: #4a5568;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.ticker-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.ticker-change {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.ticker-change.positive {
+  color: #38a169;
+  background-color: rgba(56, 161, 105, 0.1);
+}
+
+.ticker-change.negative {
+  color: #e53e3e;
+  background-color: rgba(229, 62, 62, 0.1);
+}
+
+.ticker-change.neutral {
+  color: #718096;
+  background-color: rgba(113, 128, 150, 0.1);
+}
+
+.ticker-timestamp {
+  font-size: 0.75rem;
+  color: #718096;
+  text-align: center;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(113, 128, 150, 0.2);
+}
+
+.ticker-loading {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.ticker-error {
+  background: rgba(229, 62, 62, 0.9);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Animation for updating values */
+@keyframes valueUpdate {
+  0% { background-color: rgba(79, 70, 229, 0.1); }
+  50% { background-color: rgba(79, 70, 229, 0.3); }
+  100% { background-color: transparent; }
+}
+
+.ticker-item.updating {
+  animation: valueUpdate 0.8s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ticker-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-left: none;
+    border-top: 3px solid #4f46e5;
+  }
+}
+
+/* Scrollbar styling */
+.ticker-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ticker-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.ticker-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.ticker-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
