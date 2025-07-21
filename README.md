@@ -1,4 +1,4 @@
-# 📈 Stock Market Portfolio App
+# 📈 Stock Market Portfolio App Updates
 
 A full-stack MERN (MongoDB, Express, React, Node.js) application for tracking stocks with real-time market data.
 
