@@ -143,3 +143,4 @@ This project is licensed under the MIT License.
 - Alpha Vantage for real-time market data
 
 ## Jake is here now 
+## Vatsan is here now
